@@ -1,0 +1,24 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Motion Director mark">
+  <defs>
+    <linearGradient id="md-arc" x1="26" y1="94" x2="96" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+
+  <!-- trajectory arc: wind-up to release -->
+  <path d="M26 94 Q34 28 96 34" stroke="url(#md-arc)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10" fill="none"/>
+
+  <!-- pivot joint at the wind-up -->
+  <circle cx="26" cy="94" r="4.5" fill="#0d9488"/>
+  <circle cx="26" cy="94" r="9" stroke="#0d9488" stroke-width="1.6" opacity="0.35"/>
+
+  <!-- mid keyframe -->
+  <rect x="43.5" y="41.5" width="9" height="9" rx="1.5" transform="rotate(45 47.5 46)" fill="#0d9488"/>
+
+  <!-- release keyframe + play direction -->
+  <g transform="translate(96 34) rotate(6)">
+    <circle r="14" fill="#f97316" opacity="0.12"/>
+    <path d="M-5 -8 L11 0 L-5 8 Z" fill="#f97316"/>
+  </g>
+</svg>

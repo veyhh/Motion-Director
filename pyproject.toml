@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motion-director"
+version = "0.1.0"
+description = "Local procedural spear-throw animation for rigged humanoids, driven by a Claude skill and Blender"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+motion-director = "motion_director.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["motion_director*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: invokes a real local Blender executable"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
